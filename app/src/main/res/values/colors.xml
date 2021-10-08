@@ -8,4 +8,6 @@
     <color name="secondaryDarkColor">#203d98</color>
     <color name="primaryTextColor">#12175e</color>
     <color name="secondaryTextColor">#ffffff</color>
+    <color name="primaryTextColorLight">#9AA8C7</color>
+    <color name="categoryTextColor">#8F99EB</color>
 </resources>
