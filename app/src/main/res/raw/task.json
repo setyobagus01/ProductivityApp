@@ -1,0 +1,37 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Cleaning Room",
+      "date": 1577811600000,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "description": "Creating this month's work plan",
+      "type": "Personal",
+      "tags": "Home",
+      "status": "On Going"
+    },
+    {
+      "id": 2,
+      "title": "Cleaning Room",
+      "date": 1577811600000,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "description": "Creating this month's work plan",
+      "type": "Personal",
+      "tags": "Home",
+      "status": "On Going"
+    },
+    {
+      "id": 3,
+      "title": "Cleaning Room",
+      "date": 1577811600000,
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "description": "Creating this month's work plan",
+      "type": "Personal",
+      "tags": "Home",
+      "status": "On Going"
+    }
+  ]
+}
