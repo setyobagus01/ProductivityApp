@@ -25,7 +25,6 @@ class TaskRepository(private val taskDao: TaskDao, private val executor: Executo
                 return instance as TaskRepository
             }
         }
-
     }
 
     fun getTasks(): LiveData<PagedList<Task>> {

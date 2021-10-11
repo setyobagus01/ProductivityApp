@@ -20,9 +20,21 @@
         <item name="android:textColor">@color/primaryTextColor</item>
     </style>
 
+    <style name="Widget.ProductivityApp.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/hindsiliguri_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
+
     <style name="Widget.ProductivityApp.Body2" parent="TextAppearance.MaterialComponents.Body2">
         <item name="fontFamily">@font/hindsiliguri_regular</item>
         <item name="android:textColor">#575757</item>
+    </style>
+
+    <style name="Widget.ProductivityApp.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@color/labelTextColor</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/hindsiliguri_medium</item>
     </style>
 
     <style name="Widget.ProductivityApp.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
@@ -36,4 +48,50 @@
         <item name="android:textColor">@color/primaryTextColor</item>
         <item name="android:textSize">14sp</item>
     </style>
+
+    <!--  Text Fields  -->
+    <style name="Widget.ProductivityApp.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="hintTextColor">@color/primaryTextColor</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.TextInputLayout</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/hindsiliguri_medium</item>
+
+    </style>
+
+    <style name="ThemeOverlay.App.TextInputLayout" parent="">
+        <item name="boxStrokeColor">@color/primaryColor</item>
+    </style>
+
+    <!-- Line -->
+    <style name="Widget.ProductivityApp.Lines" parent="">
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/labelTextColor</item>
+    </style>
+
+    <!-- Button -->
+
+    <style name="TextAppearance.App.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/hindsiliguri_medium</item>
+        <item name="android:fontFamily">@font/hindsiliguri_medium</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <style name="Widget.ProductivityApp.Button" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Button</item>
+        <item name="android:textAppearance">@style/TextAppearance.App.Button</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>
+    </style>
+
+
+    <style name="ThemeOverlay.App.Button" parent="">
+        <item name="colorPrimary">@color/secondaryColor</item>
+        <item name="colorOnPrimary">@color/secondaryTextColor</item>
+    </style>
+
 </resources>

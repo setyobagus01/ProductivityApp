@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primaryColor"
+    tools:context=".ui.add.AddTaskActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/ic_shape_navigation"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        style="@style/Widget.ProductivityApp.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:text="Add Task"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title Text Field -->
+
+    <TextView
+        android:id="@+id/textView12"
+        style="@style/Widget.ProductivityApp.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="30dp"
+        android:text="Title"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledTextField"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:hint="Plan for a month"
+        android:textColorHint="@color/primaryTextColor"
+        style="@style/Widget.ProductivityApp.TextInputLayout"
+        app:boxBackgroundMode="none"
+        app:boxBackgroundColor="@color/primaryColor"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <!-- Date Text Field -->
+
+    <TextView
+        android:id="@+id/textView13"
+        style="@style/Widget.ProductivityApp.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Date"
+        app:layout_constraintStart_toStartOf="@+id/filledTextField"
+        app:layout_constraintTop_toBottomOf="@+id/filledTextField" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.ProductivityApp.TextInputLayout"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:hint="4 August 2021"
+        android:textColorHint="@color/primaryTextColor"
+        app:boxBackgroundColor="@color/primaryColor"
+        app:boxBackgroundMode="none"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/primaryColor"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayout" />
+
+
+
+    <!-- Time Text Field -->
+
+    <TextView
+        android:id="@+id/textView14"
+        style="@style/Widget.ProductivityApp.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Time"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.ProductivityApp.TextInputLayout"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:hint="07:30"
+        android:textColorHint="@color/primaryTextColor"
+        app:boxBackgroundColor="@color/primaryColor"
+        app:boxBackgroundMode="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        style="@style/Widget.ProductivityApp.TextInputLayout"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="07:00"
+        android:textColorHint="@color/primaryTextColor"
+        app:boxBackgroundColor="@color/primaryColor"
+        app:boxBackgroundMode="none"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView14">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <!-- Description Text Field -->
+
+    <TextView
+        android:id="@+id/textView15"
+        style="@style/Widget.ProductivityApp.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Description"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        style="@style/Widget.ProductivityApp.TextInputLayout"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:hint="Creating this month's work plan"
+        android:textColorHint="@color/primaryTextColor"
+        app:boxBackgroundColor="@color/primaryColor"
+        app:boxBackgroundMode="none"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/textView16"
+        style="@style/Widget.ProductivityApp.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Type"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+        <RadioButton
+            android:id="@+id/radio_personal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:buttonTint="@color/secondaryColor"
+            android:fontFamily="@font/hindsiliguri_regular"
+            android:text="Personal"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radio_private"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:buttonTint="@color/secondaryColor"
+            android:fontFamily="@font/hindsiliguri_regular"
+            android:text="Private"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radio_secret"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:buttonTint="@color/secondaryColor"
+            android:fontFamily="@font/hindsiliguri_regular"
+            android:text="Secret"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/containedButton"
+        style="@style/Widget.ProductivityApp.Button"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:stateListAnimator="@null"
+        android:text="Create"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

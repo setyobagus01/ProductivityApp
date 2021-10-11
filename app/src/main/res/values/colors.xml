@@ -10,4 +10,5 @@
     <color name="secondaryTextColor">#ffffff</color>
     <color name="primaryTextColorLight">#9AA8C7</color>
     <color name="categoryTextColor">#8F99EB</color>
+    <color name="labelTextColor">#8A8BB3</color>
 </resources>
