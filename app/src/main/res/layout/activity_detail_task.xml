@@ -6,13 +6,166 @@
     android:layout_height="match_parent"
     tools:context=".detail.DetailTaskActivity">
 
+    <ImageButton
+        android:id="@+id/ib_nav_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/ic_shape_navigation"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
+        android:id="@+id/textView11"
+        style="@style/Widget.ProductivityApp.Headline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Detail Task Activity"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="55dp"
+        android:text="Detail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/ic_shape_navigation"
+        android:src="@drawable/ic_more_square"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_detail_title"
+        style="@style/Widget.ProductivityApp.Headline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="123dp"
+        android:text="Plan for a month"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_detail_type"
+        style="@style/Widget.ProductivityApp.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Personal type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_title" />
+
+    <ImageView
+        android:id="@+id/iv_est"
+        android:layout_width="157dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/ic_gradient_est"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_type" />
+
+    <TextView
+        android:id="@+id/tv_est_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="72dp"
+        android:fontFamily="@font/hindsiliguri_regular"
+        android:textSize="18sp"
+        android:textColor="@color/primaryLightColor"
+        android:text="Est. Date"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_est"
+        app:layout_constraintEnd_toEndOf="@+id/iv_est"
+        app:layout_constraintStart_toStartOf="@+id/iv_est"
+        app:layout_constraintTop_toTopOf="@+id/iv_est" />
+
+    <TextView
+        android:id="@+id/tv_detail_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="11dp"
+        android:fontFamily="@font/hindsiliguri_regular"
+        android:text="24 August 2021"
+        android:textColor="@color/primaryLightColor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_est"
+        app:layout_constraintEnd_toEndOf="@+id/iv_est"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/iv_est"
+        app:layout_constraintTop_toTopOf="@+id/iv_est"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/iv_est2"
+        android:layout_width="157dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="44dp"
+        android:background="@drawable/ic_gradient_est"
+        app:layout_constraintStart_toEndOf="@+id/iv_est"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_type" />
+
+    <TextView
+        android:id="@+id/tv_est_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="72dp"
+        android:fontFamily="@font/hindsiliguri_regular"
+        android:textSize="18sp"
+        android:textColor="@color/primaryLightColor"
+        android:text="Est. Time"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_est2"
+        app:layout_constraintEnd_toEndOf="@+id/iv_est2"
+        app:layout_constraintStart_toStartOf="@+id/iv_est2"
+        app:layout_constraintTop_toTopOf="@+id/iv_est2" />
+
+    <TextView
+        android:id="@+id/tv_detail_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="11dp"
+        android:fontFamily="@font/hindsiliguri_regular"
+        android:text="07:00 - 07:30"
+        android:textColor="@color/primaryLightColor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_est2"
+        app:layout_constraintEnd_toEndOf="@+id/iv_est2"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="@+id/iv_est2"
+        app:layout_constraintTop_toTopOf="@+id/iv_est2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_task"
+        style="@style/Widget.ProductivityApp.Headline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:text="Task"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_est" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.screening.productivityapp.R
 import com.screening.productivityapp.data.Task
 import com.screening.productivityapp.detail.DetailTaskActivity
+import com.screening.productivityapp.utils.TASK_ID
 
 class TaskAdapter : PagedListAdapter<Task, TaskAdapter.TaskViewHolder>(DIFF_CALLBACK) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskAdapter.TaskViewHolder {
@@ -39,6 +40,7 @@ class TaskAdapter : PagedListAdapter<Task, TaskAdapter.TaskViewHolder>(DIFF_CALL
             tvTag.text = task.tags
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, DetailTaskActivity::class.java)
+                intent.putExtra(TASK_ID, task.id)
                 itemView.context.startActivity(intent)
             }
         }

@@ -35,6 +35,10 @@ class TaskRepository(private val taskDao: TaskDao, private val executor: Executo
         return LivePagedListBuilder(taskDao.getTasks(), config).build()
     }
 
+    fun getTaskById(taskId: Int):LiveData<Task> {
+        return taskDao.getTaskById(taskId)
+    }
+
     fun insertTask(newTask: Task): Long {
         val callable = Callable { taskDao.insertTask(newTask)}
         val execute = executor.submit(callable)

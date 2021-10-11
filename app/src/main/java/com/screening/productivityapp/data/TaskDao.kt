@@ -1,5 +1,6 @@
 package com.screening.productivityapp.data
 
+import androidx.lifecycle.LiveData
 import androidx.paging.DataSource
 import androidx.room.*
 
@@ -8,6 +9,9 @@ interface TaskDao {
 
     @Query("SELECT * FROM tasks")
     fun getTasks(): DataSource.Factory<Int, Task>
+
+    @Query("SELECT * FROM tasks WHERE id = :taskId")
+    fun getTaskById(taskId: Int): LiveData<Task>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insertTask(task: Task): Long

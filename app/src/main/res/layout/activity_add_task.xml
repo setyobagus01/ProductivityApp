@@ -46,7 +46,6 @@
         android:id="@+id/filledTextField"
         android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:hint="Plan for a month"
         android:textColorHint="@color/primaryTextColor"
         style="@style/Widget.ProductivityApp.TextInputLayout"
         app:boxBackgroundMode="none"
@@ -55,8 +54,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView12">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_ed_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="Plan for a month"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -88,6 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_ed_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -100,6 +102,7 @@
         android:layout_marginEnd="30dp"
         android:background="@color/primaryColor"
         android:src="@drawable/ic_calendar"
+        android:onClick="showDatePicker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textInputLayout"
         app:layout_constraintTop_toTopOf="@+id/textInputLayout" />
@@ -129,11 +132,13 @@
         app:boxBackgroundColor="@color/primaryColor"
         app:boxBackgroundMode="none"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14">
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        android:onClick="showTimePicker">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_ed_end_time"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -149,11 +154,13 @@
         app:boxBackgroundColor="@color/primaryColor"
         app:boxBackgroundMode="none"
         app:layout_constraintStart_toStartOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/textView14">
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        android:onClick="showTimePicker">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_ed_start_time"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -184,6 +191,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView15">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_ed_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
