@@ -9,7 +9,7 @@ interface TaskDao {
     @Query("SELECT * FROM tasks")
     fun getTasks(): DataSource.Factory<Int, Task>
 
-    @Insert(onConflict =  OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insertTask(task: Task): Long
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
