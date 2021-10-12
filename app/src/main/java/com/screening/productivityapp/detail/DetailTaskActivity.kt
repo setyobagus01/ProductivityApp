@@ -28,8 +28,8 @@ class DetailTaskActivity : AppCompatActivity() {
         val factory = ViewModelFactory.getInstance(this)
         viewModel = ViewModelProvider(this, factory).get(DetailTaskViewModel::class.java)
 
-        viewModel.start(taskId)
-        viewModel.task.observe(this, { task ->
+        viewModel.setSelectedId(taskId)
+        viewModel.getTask().observe(this, { task ->
             if (task != null) {
                 findViewById<TextView>(R.id.tv_detail_title).text = task.title
                 findViewById<TextView>(R.id.tv_detail_type).text = "${task.type} type"
