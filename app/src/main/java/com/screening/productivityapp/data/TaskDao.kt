@@ -21,4 +21,19 @@ interface TaskDao {
 
     @Delete
     fun deleteTask(task: Task)
+
+
+    // Tag
+
+    @Query("SELECT * FROM tag")
+    fun getTags(): DataSource.Factory<Int, Tag>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertAll(vararg tags: Tag)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertTag(tag: Tag): Long
+
+    @Delete
+    fun deleteTag(tag: Tag)
 }

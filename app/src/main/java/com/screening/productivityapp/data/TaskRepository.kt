@@ -51,4 +51,25 @@ class TaskRepository(private val taskDao: TaskDao, private val executor: Executo
         }
     }
 
+    // Tag
+    fun getTags(): LiveData<PagedList<Tag>> {
+        val config = PagedList.Config.Builder()
+            .setEnablePlaceholders(true)
+            .setPageSize(30)
+            .build()
+        return LivePagedListBuilder(taskDao.getTags(), config).build()
+    }
+
+    fun insertTag(newTag: Tag): Long {
+        val callable = Callable { taskDao.insertTag(newTag) }
+        val execute = executor.submit(callable)
+        return execute.get()
+    }
+
+    fun deleteTag(tag: Tag) {
+        executor.execute {
+            taskDao.deleteTag(tag)
+        }
+    }
+
 }

@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.screening.productivityapp.R
 import com.screening.productivityapp.ViewModelFactory
 import com.screening.productivityapp.data.Task
+import com.screening.productivityapp.tag.TagDialog
 import com.screening.productivityapp.utils.DatePickerFragment
 import com.screening.productivityapp.utils.TimePickerFragment
 import java.text.SimpleDateFormat
@@ -62,6 +63,13 @@ class AddTaskActivity : AppCompatActivity(), DatePickerFragment.DialogDateListen
             } else {
                 Toast.makeText(this, "Task cannot be empty", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        val addTag = findViewById<TextView>(R.id.add_tag)
+        addTag.setOnClickListener {
+            val dialogFragment = TagDialog()
+            dialogFragment.show(supportFragmentManager, "tagDialog")
+            true
         }
 
     }

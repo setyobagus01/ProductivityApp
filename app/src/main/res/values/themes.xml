@@ -57,6 +57,19 @@
         <item name="fontFamily">@font/hindsiliguri_medium</item>
 
     </style>
+    
+    <style name="Widget.Productivity.TextInputLayout.FilledBox" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="hintTextColor">#8010275A</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/hindsiliguri_medium</item>
+        <item name="shapeAppearance">@style/Widget.ProductivityApp.ShapeAppearance.App.SmallComponent</item>
+        <item name="boxBackgroundColor">#F6F6F6</item>
+    </style>
+
+    <style name="Widget.ProductivityApp.ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">5dp</item>
+    </style>
 
     <style name="ThemeOverlay.App.TextInputLayout" parent="">
         <item name="boxStrokeColor">@color/primaryColor</item>
@@ -93,5 +106,6 @@
         <item name="colorPrimary">@color/secondaryColor</item>
         <item name="colorOnPrimary">@color/secondaryTextColor</item>
     </style>
+
 
 </resources>
