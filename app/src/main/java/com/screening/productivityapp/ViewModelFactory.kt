@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.screening.productivityapp.data.TaskRepository
 import com.screening.productivityapp.detail.DetailTaskViewModel
+import com.screening.productivityapp.tag.AddTagViewModel
 import com.screening.productivityapp.task.TaskViewModel
 import com.screening.productivityapp.ui.add.AddTaskViewModel
 
@@ -17,6 +18,9 @@ class ViewModelFactory private constructor(private val taskRepository: TaskRepos
             }
             modelClass.isAssignableFrom(AddTaskViewModel::class.java) -> {
                 AddTaskViewModel(taskRepository) as T
+            }
+            modelClass.isAssignableFrom(AddTagViewModel::class.java) -> {
+                AddTagViewModel(taskRepository) as T
             }
             modelClass.isAssignableFrom(DetailTaskViewModel::class.java) -> {
                 DetailTaskViewModel(taskRepository) as T

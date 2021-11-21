@@ -12,6 +12,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="45dp"
+        android:elevation="8dp"
         android:background="@drawable/ic_shape_navigation"
         android:src="@drawable/ic_arrow_back"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,6 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="55dp"
+        android:textSize="18sp"
         android:text="Detail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +36,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="45dp"
         android:layout_marginEnd="24dp"
+        android:elevation="8dp"
         android:background="@drawable/ic_shape_navigation"
         android:src="@drawable/ic_more_square"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +67,7 @@
 
     <ImageView
         android:id="@+id/iv_est"
-        android:layout_width="157dp"
+        android:layout_width="175dp"
         android:layout_height="81dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="22dp"
@@ -78,22 +81,23 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="36dp"
         android:layout_marginEnd="72dp"
+        android:layout_marginBottom="36dp"
         android:fontFamily="@font/hindsiliguri_regular"
-        android:textSize="18sp"
-        android:textColor="@color/primaryLightColor"
         android:text="Est. Date"
+        android:textColor="@color/primaryLightColor"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/iv_est"
         app:layout_constraintEnd_toEndOf="@+id/iv_est"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/iv_est"
-        app:layout_constraintTop_toTopOf="@+id/iv_est" />
+        app:layout_constraintTop_toTopOf="@+id/iv_est"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tv_detail_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="41dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="11dp"
@@ -104,17 +108,19 @@
         app:layout_constraintBottom_toBottomOf="@+id/iv_est"
         app:layout_constraintEnd_toEndOf="@+id/iv_est"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/iv_est"
+        app:layout_constraintStart_toStartOf="@+id/tv_est_date"
         app:layout_constraintTop_toTopOf="@+id/iv_est"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/iv_est2"
-        android:layout_width="157dp"
+        android:layout_width="175dp"
         android:layout_height="81dp"
         android:layout_marginTop="22dp"
-        android:layout_marginStart="44dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="11dp"
         android:background="@drawable/ic_gradient_est"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_est"
         app:layout_constraintTop_toBottomOf="@+id/tv_detail_type" />
 
@@ -124,22 +130,23 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="36dp"
         android:layout_marginEnd="72dp"
+        android:layout_marginBottom="36dp"
         android:fontFamily="@font/hindsiliguri_regular"
-        android:textSize="18sp"
-        android:textColor="@color/primaryLightColor"
         android:text="Est. Time"
+        android:textColor="@color/primaryLightColor"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/iv_est2"
         app:layout_constraintEnd_toEndOf="@+id/iv_est2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/iv_est2"
-        app:layout_constraintTop_toTopOf="@+id/iv_est2" />
+        app:layout_constraintTop_toTopOf="@+id/iv_est2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tv_detail_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
         android:layout_marginTop="41dp"
         android:layout_marginEnd="14dp"
         android:layout_marginBottom="11dp"
@@ -149,8 +156,8 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/iv_est2"
         app:layout_constraintEnd_toEndOf="@+id/iv_est2"
-        app:layout_constraintHorizontal_bias="0.121"
-        app:layout_constraintStart_toStartOf="@+id/iv_est2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_est_time"
         app:layout_constraintTop_toTopOf="@+id/iv_est2"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -162,7 +169,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="30dp"
         android:text="Task"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_est" />
 

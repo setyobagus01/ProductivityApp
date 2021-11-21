@@ -5,9 +5,15 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.paging.PagedList
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.screening.productivityapp.R
 import com.screening.productivityapp.ViewModelFactory
+import com.screening.productivityapp.data.Tag
 import com.screening.productivityapp.data.Task
+import com.screening.productivityapp.tag.AddTagViewModel
+import com.screening.productivityapp.tag.TagAdapter
 import com.screening.productivityapp.tag.TagDialog
 import com.screening.productivityapp.utils.DatePickerFragment
 import com.screening.productivityapp.utils.TimePickerFragment
@@ -20,13 +26,21 @@ class AddTaskActivity : AppCompatActivity(), DatePickerFragment.DialogDateListen
     private var dueDateMillis: Long = System.currentTimeMillis()
     private lateinit var view: View
     private lateinit var viewModel: AddTaskViewModel
+    private lateinit var viewModel2: AddTagViewModel
+    private lateinit var recycler: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_task)
 
+        recycler = findViewById(R.id.rv_tags)
+        recycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
         val factory = ViewModelFactory.getInstance(this)
         viewModel = ViewModelProvider(this, factory).get(AddTaskViewModel::class.java)
+        viewModel.tags.observe(this, { tag ->
+            if (tag != null) showRecyclerView(tag)
+        })
 
         val navBack = findViewById<ImageButton>(R.id.imageButton)
         navBack.setOnClickListener {
@@ -67,11 +81,20 @@ class AddTaskActivity : AppCompatActivity(), DatePickerFragment.DialogDateListen
 
         val addTag = findViewById<TextView>(R.id.add_tag)
         addTag.setOnClickListener {
+            viewModel2 = ViewModelProvider(this, factory).get(AddTagViewModel::class.java)
+            val tag = Tag(name = "Home")
+            viewModel2.addTag(tag)
             val dialogFragment = TagDialog()
             dialogFragment.show(supportFragmentManager, "tagDialog")
             true
         }
 
+    }
+
+    private fun showRecyclerView(tag: PagedList<Tag>) {
+        val adapter = TagAdapter()
+        adapter.submitList(tag)
+        recycler.adapter = adapter
     }
 
     fun showDatePicker(view: View) {

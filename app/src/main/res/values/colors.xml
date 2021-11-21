@@ -11,4 +11,10 @@
     <color name="primaryTextColorLight">#9AA8C7</color>
     <color name="categoryTextColor">#8F99EB</color>
     <color name="labelTextColor">#8A8BB3</color>
+    <color name="personalColor">#858FE9</color>
+    <color name="workColor">#7FC9E7</color>
+    <color name="privateColor">#FFE4E4</color>
+    <color name="meetingColor">#CBF9D8</color>
+    <color name="eventsColor">#E0E3F9</color>
+    <color name="createBoardColor">#FFEFEB</color>
 </resources>

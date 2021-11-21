@@ -43,6 +43,12 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="Widget.ProductivityApp.Subtitle3" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/hindsiliguri_medium</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
     <style name="Widget.ProductivityApp.Body1" parent="TextAppearance.MaterialComponents.Body1">
         <item name="fontFamily">@font/hindsiliguri_regular</item>
         <item name="android:textColor">@color/primaryTextColor</item>

@@ -13,6 +13,7 @@ class TagDialog: DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        dialog!!.window?.setBackgroundDrawableResource(R.drawable.dialog_round_corner)
         return inflater.inflate(R.layout.add_tag, container, false)
     }
 }
